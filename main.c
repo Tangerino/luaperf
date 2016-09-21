@@ -129,6 +129,7 @@ int main(int argc, char** argv) {
         } else {
             printf("It was too fast....");
         }
+        lua_close(L);
     }
     return (EXIT_SUCCESS);
 }
