@@ -15,12 +15,13 @@
 #include <lauxlib.h>
 #include <unistd.h>
 
+// power factor formula
 const char *formula =
         "ww = w * w;"
         "vv = v * v;"
         "s = ww + vv;"
         "r = math.sqrt(s);"
-        "pf = 1 / r;"
+        "pf = w / r;"
         "return pf;";
 
 static int timeval_subtract(struct timeval *result, struct timeval *startTime, struct timeval *endTime) {
